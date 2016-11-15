@@ -7,11 +7,63 @@
             <script type="text/javascript" src="OAuth.js"></script>
             <script type="text/javascript" src="SHA1.js"></script>
             <script type="text/javascript">
+var limit;
+            function cb(data) { 
+            for (i=0; i<limit; i++)   {     
+                    console.log("cb: " + JSON.stringify(data.businesses[i].name) +
+                               " Rating: " + JSON.stringify(data.businesses[i].rating)+
+                               " Address: " + JSON.stringify(data.businesses[i].location.display_address)
 
-            function cb(data) {        
-                    console.log("cb: " + JSON.stringify(data));
-            }
-            
+
+                       );
+        var newDivAll = $("<div class = 'bigDiv' id='all_"+i+"'>" +"<br>");
+        var waitingTime=10;
+        var currentLine = $("<div id='line_"+i+"'>" );
+        var newDivTime = $("<div  id='time_"+i+"'>" );
+        var button0 = $('<button  />',
+    {
+        text: 'No line',
+        id: i,
+        value: 0
+       // click: function () { alert('hi'); }
+    });
+        var button10 = $('<button  />',
+    {
+        text: '10 minutes line',
+        id: i,
+        value:10
+       // click: function () { alert('hi'); }
+    });
+
+        var button20 = $('<button  />',
+    {
+        text: '20+ minutes in line',
+        id: i,
+        value: 20
+       // click: function () { alert('hi'); }
+    });
+
+        var newButton = $('<button  />',
+    {
+        text: 'Comment',
+        id: i,
+       // click: function () { alert('hi'); }
+    });
+        $('.restaurants').append(newDivAll);
+        $("#all_"+i).append(JSON.stringify(data.businesses[i].name)+"<br>"
+                               );
+         $("#all_"+i).append(newDivTime);
+        $("#time_"+i).append(currentLine);
+        $("#line_"+i).append(waitingTime);
+        $("#time_"+i).append(button0, button10, button20);
+        $("#all_"+i).append(newButton);
+
+                }
+
+
+                        ;}
+function SearchRes() {
+                console.log("hey");
                 var auth = {
                     consumerKey : "Am-C5I2OXXdpHG-ulB00fQ",
                     consumerSecret : "aBZF5cAZ--yFIIdvJEOBAlo-vNM",
@@ -23,8 +75,9 @@
                 };
         
                 var terms = 'restaurants';
-                var near = 'Los+Angeles';
-                var limit = 1;
+                var near = $("#search").val();
+                //var near = 'Los+Angeles';
+                 limit = 10;
         
                 var accessor = {
                     consumerSecret : auth.consumerSecret,
@@ -59,6 +112,13 @@
                     'jsonpCallback' : 'cb',
                     'cache': true
                 })
+         };
+         function clear() {
+            $(".restaurants").empty();
+         }
+         $(document).on('click', '.forSearch' , clear);
+         $(document).on('click', '.forSearch' , SearchRes);
+
                 // .done(function(data, textStatus, jqXHR) {
                 //         console.log('success[' + data + '], status[' + textStatus + '], jqXHR[' + JSON.stringify(jqXHR) + ']');
                 //     }
@@ -71,6 +131,13 @@
             </script>
         </head>
         <body>
+        <p>Near:</p>
             <input type="text" id="search">
+            <button  class="forSearch" id="searchButton">Search</button>
+                  <div class="restaurants">
+                      
+                  </div>
+               
+
         </body>
     </html>
