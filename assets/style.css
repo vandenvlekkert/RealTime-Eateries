@@ -17,26 +17,27 @@ h1{
 }
 .yelp{
 	width: 800px;
-	height: 500px;
+	height: auto;
 	border: 3px solid black;
 	float: left;
 	margin-left: 10px;
 	background-color: white;
-	opacity: 0.5;
+	opacity: 0.9;
 }
 #map{
  height: 50%;
  margin: 0;
+ border: 3px solid black;
 }
 
-.container3{
-	width: 800px;
-	height: 200px;
+.container{
+	width: auto;;
+	height: auto;
 	border: 3px solid black;
-	float: left;
+	float: right;
 	background-color: white;
 	margin: 20px 30px 20px 10px;
-	opacity: 0.5;
+	opacity: 0.9;
 
 }
 .glyphicon{
@@ -49,7 +50,4 @@ h1{
 }
 form.navbar-form{
 margin-right: 20px;
-}
-hr{
-	color: black;
 }
