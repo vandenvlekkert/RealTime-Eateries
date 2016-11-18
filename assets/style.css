@@ -48,6 +48,13 @@ h1{
 
 
 }
+#info{
+	height: 200px;
+	width: 40%;
+	float: right;
+	border:3px black solid;
+	opacity: 0.9;
+}
 form.navbar-form{
 margin-right: 20px;
 }
