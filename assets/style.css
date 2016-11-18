@@ -64,6 +64,14 @@ h1{
 	opacity: 0.9;
 	margin:0 50px 0 0px;
 }
+#info{
+	height: 200px;
+	width: 600px;
+	float: right;
+	border:3px black solid;
+	opacity: 0.9;
+	margin:0 50px 0 0px;
+}
 form.navbar-form{
 margin-right: 20px;
 }
