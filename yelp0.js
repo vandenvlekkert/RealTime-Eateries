@@ -18,8 +18,10 @@ function lineRecord() {
 
 }
 
+function cb(data) {
     for (i = 0; i < limit; i++) {
-            console.log ("cb: " + JSON.stringify(data.businesses[i].name) +
+
+        console.log("cb: " + JSON.stringify(data.businesses[i].name) +
             " Rating: " + JSON.stringify(data.businesses[i].rating) +
             " Address: " + JSON.stringify(data.businesses[i].location.display_address)
         );
@@ -28,9 +30,6 @@ function lineRecord() {
         var waitingTime = "No Data";
         var currentLine = $("<div id='line_" + i + "'>");
         var newDivTime = $("<div  id='time_" + i + "'>");
-
-
-
         var waitingTime = $('<button  />', {
             text: waitingTime,
             id: "lineTime" + i,
@@ -77,7 +76,12 @@ function lineRecord() {
         $("#time_" + i).append(button0, button10, button20);
         //   $("#all_"+i).append(newButton);
 
-    };
+    }
+
+
+    ;
+}
+
 function SearchRes() {
     console.log("hey");
     var auth = {
