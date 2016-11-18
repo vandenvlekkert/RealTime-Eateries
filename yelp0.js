@@ -10,7 +10,7 @@ function lineRecord() {
     console.log(thisId);
     $("#lineTime" + thisId).attr("text", waitingTime);
     $("#lineTime" + thisId).text(waitingTime);
-    myVar = setTimeout(backToNoData, 3000)
+    myVar = setTimeout(backToNoData, 120000)
 
     function backToNoData() {
         $("#lineTime" + thisId).text("No Data");
@@ -18,10 +18,8 @@ function lineRecord() {
 
 }
 
-function cb(data) {
     for (i = 0; i < limit; i++) {
-
-        console.log("cb: " + JSON.stringify(data.businesses[i].name) +
+            console.log ("cb: " + JSON.stringify(data.businesses[i].name) +
             " Rating: " + JSON.stringify(data.businesses[i].rating) +
             " Address: " + JSON.stringify(data.businesses[i].location.display_address)
         );
@@ -79,12 +77,7 @@ function cb(data) {
         $("#time_" + i).append(button0, button10, button20);
         //   $("#all_"+i).append(newButton);
 
-    }
-
-
-    ;
-}
-
+    };
 function SearchRes() {
     console.log("hey");
     var auth = {
