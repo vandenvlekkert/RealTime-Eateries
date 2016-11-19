@@ -10,7 +10,7 @@ function lineRecord() {
     console.log(thisId);
     $("#lineTime" + thisId).attr("text", waitingTime);
     $("#lineTime" + thisId).text(waitingTime);
-    myVar = setTimeout(backToNoData, 3000)
+    myVar = setTimeout(backToNoData, 120000)
 
     function backToNoData() {
         $("#lineTime" + thisId).text("No Data");
@@ -30,9 +30,6 @@ function cb(data) {
         var waitingTime = "No Data";
         var currentLine = $("<div id='line_" + i + "'>");
         var newDivTime = $("<div  id='time_" + i + "'>");
-
-
-
         var waitingTime = $('<button  />', {
             text: waitingTime,
             id: "lineTime" + i,
@@ -42,14 +39,14 @@ function cb(data) {
 
         var button0 = $('<button  />', {
             text: 'No line',
-            class: 'line',
+            class: 'line btn-success',
             id: i,
             value: 0
                 // click: function () { waitingTime = 0 }
         });
         var button10 = $('<button  />', {
             text: '10 minutes line',
-            class: 'line',
+            class: 'line btn-warning',
             id: i,
             value: 10
                 //  click: function () { waitingTime = 10 }
@@ -57,7 +54,7 @@ function cb(data) {
 
         var button20 = $('<button  />', {
             text: '20+ minutes in line',
-            class: 'line',
+            class: 'line btn-danger',
             id: i,
             value: 20
                 // click: function () { alert('hi'); }
