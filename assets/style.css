@@ -27,7 +27,7 @@ p{
 	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 }
 .yelp{
-	width: 800px;
+	width: 600px;
 	height: auto;
 	border: 3px solid black;
 	float: left;
@@ -60,7 +60,8 @@ p{
 
 #map{
  height: 50%;
- margin: 0;
+ width: 500px;
+ margin-left: 790px;
  border: 3px solid black;
 }
 
@@ -80,7 +81,30 @@ p{
 	-webkit-text-stroke: 2px black;
 	margin-left: 15px;
 
-
+}
+#info{
+	height: 200px;
+	width: 500px;
+	float: right;
+	border:3px black solid;
+	opacity: 0.9;
+	margin:0 50px 0 0px;
+}
+#info{
+	height: 200px;
+	width: 500px;
+	float: right;
+	border:3px black solid;
+	opacity: 0.9;
+	margin:0 50px 0 0px;
+}
+#info{
+	height: 200px;
+	width: 500px;
+	float: right;
+	border:3px black solid;
+	opacity: 0.9;
+	margin:0 50px 0 0px;
 }
 form.navbar-form{
 margin-right: 20px;
