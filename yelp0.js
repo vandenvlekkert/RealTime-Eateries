@@ -42,14 +42,14 @@ function cb(data) {
 
         var button0 = $('<button  />', {
             text: 'No line',
-            class: 'line',
+            class: 'line btn-success',
             id: i,
             value: 0
                 // click: function () { waitingTime = 0 }
         });
         var button10 = $('<button  />', {
             text: '10 minutes line',
-            class: 'line',
+            class: 'line btn-warning',
             id: i,
             value: 10
                 //  click: function () { waitingTime = 10 }
@@ -57,7 +57,7 @@ function cb(data) {
 
         var button20 = $('<button  />', {
             text: '20+ minutes in line',
-            class: 'line',
+            class: 'line btn-danger',
             id: i,
             value: 20
                 // click: function () { alert('hi'); }

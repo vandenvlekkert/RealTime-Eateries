@@ -1,19 +1,30 @@
 html, body {
  height: 100%;
  margin: 0;
+ 
 }
 
 header{
 	width: auto;
 	height: 200px;
+	opacity: 0.9;
+
+}
+.jumbotron{
+	
 
 }
 h1{
 	text-align: center;
 	font-size: 80px;
-	color: blue;
+	color: red;
 	-webkit-text-stroke: 2px black;
-	font-family: 'Shrikhand';
+	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+p{
+	text-align: center;
+	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 }
 .yelp{
 	width: 800px;
@@ -24,6 +35,29 @@ h1{
 	background-color: white;
 	opacity: 0.9;
 }
+
+.forSearch{
+	 padding:8px 15px;
+                background:rgba(50, 50, 50, 0.2);
+                border:0px solid #dbdbdb;
+
+
+}
+
+#searchButton{
+	position:relative;
+                padding:6px 15px;
+                left:-8px;
+                border:2px solid #207cca;
+                background-color:#207cca;
+                color:#fafafa;
+}
+.restaurants{
+	text-align: center;
+    
+    
+}
+
 #map{
  height: 50%;
  margin: 0;
