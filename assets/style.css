@@ -1,34 +1,92 @@
 html, body {
  height: 100%;
  margin: 0;
+ 
 }
 
 header{
 	width: auto;
 	height: 200px;
+	opacity: 0.9;
+
+}
+.jumbotron{
+	
 
 }
 h1{
 	text-align: center;
 	font-size: 80px;
-	color: blue;
+	color: red;
 	-webkit-text-stroke: 2px black;
-	font-family: 'Shrikhand';
+	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+p{
+	text-align: center;
+	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 }
 .yelp{
 	width: 600px;
 	height: auto;
 	border: 3px solid black;
 	float: left;
-	margin-left: 10px;
+	margin: 50px;
 	background-color: white;
 	opacity: 0.9;
+}
+
+.forSearch{
+	 padding:8px 15px;
+                background:rgba(50, 50, 50, 0.2);
+                border:0px solid #dbdbdb;
+
+
+}
+
+#searchButton{
+	position:relative;
+                padding:6px 15px;
+                left:-8px;
+                border:2px solid #207cca;
+                background-color:#207cca;
+                color:#fafafa;
+}
+.restaurants{
+	text-align: center;
+    
+    
+}
+#search {
+	padding: 3px;
+	border: 3px solid black;
+	margin:  15px 10px 10px 200px;
+}
+.bigDiv {
+	color: blue;
+	font-weight: bold;
+}
+.line {
+  border-radius: 5px;
+	margin: 2px;
+	padding: 3px;
 }
 #map{
  height: 50%;
  width: 500px;
  margin-left: 790px;
+ margin-top: 50px;
  border: 3px solid black;
+}
+#address {
+	text-align: center;
+	color: blue;
+	font-weight: bold;
+	margin-left: 790px;
+	margin-top: 5px;
+	background-color: white;
+	width: 500px;
+	border: 3px solid black;
 }
 
 .container{
