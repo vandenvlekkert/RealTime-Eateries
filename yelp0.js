@@ -58,7 +58,7 @@ function cb(data) {
             id: i,
             value: 20
                 // click: function () { alert('hi'); }
-        });
+        }); 
 
         //     var newButton = $('<button  />',
         // {
@@ -67,7 +67,7 @@ function cb(data) {
         //    // click: function () { alert('hi'); }
         // });
 
-
+        console.log(button20)
         $('.restaurants').append(newDivAll);
         $("#all_" + i).append(JSON.stringify(data.businesses[i].name) + "<br>");
         $("#all_" + i).append(newDivTime);
